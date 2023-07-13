@@ -4,7 +4,9 @@
   "description": "creating react app without using any libraries or frameworks such as create-react-app or NextJS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server .",
+    "build": "webpack ."
   },
   "author": "shahbaz42",
   "license": "ISC",
