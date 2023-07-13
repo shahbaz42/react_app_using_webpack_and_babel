@@ -1,4 +1,5 @@
 const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 /*We are basically telling webpack to take index.js from entry. Then check for all file extensions in resolve. 
 After that apply all the rules in module.rules and produce the output and place it in main.js in the public folder.*/
@@ -17,7 +18,7 @@ module.exports={
         /** "path"
          * the folder path of the output file 
          */
-        path: path.resolve(__dirname, "public"),
+        path: path.resolve(__dirname, "build"),
         /** "filename"
          * the name of the output file 
          */
@@ -74,5 +75,12 @@ module.exports={
                 use:  'babel-loader' //loader which we are going to use
             }
         ]
-    }
+    },
+    plugins: [
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: "./public" } //copying all files from public folder to build folder
+            ]
+        })
+    ]
 }
