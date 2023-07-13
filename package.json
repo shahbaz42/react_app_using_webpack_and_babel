@@ -1,0 +1,11 @@
+{
+  "name": "react_app_without_create_react_app",
+  "version": "1.0.0",
+  "description": "creating react app without using any libraries or frameworks such as create-react-app or NextJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shahbaz42",
+  "license": "ISC"
+}
