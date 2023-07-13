@@ -3,14 +3,9 @@ creating react app without using any libraries or frameworks such as create-reac
 
 # We are going to use the following libraries
 
-## Webpack
-Webpack is a module bundler. It helps in bundling all the modules into a single file.
-
-## Babel
-Babel is a JavaScript compiler. It helps in converting the latest version of JavaScript into a version that is supported by all the browsers.
-
-## NodeJS
-NodeJS is a JavaScript runtime environment. It helps in running JavaScript on the server.
+- *Webpack* : It is a module bundler. It helps in bundling all the modules into a single file.
+- *Babel* : It is a JavaScript compiler. It helps in compiling the JavaScript files using babel.
+- *React* : It is a JavaScript library. It helps in building user interfaces.
 
 # Steps to create a react app from scratch
 
@@ -115,12 +110,48 @@ react-dom is a JavaScript library. It helps in rendering the react components.
 
 ## Step 7: Create public/index.html file
 Create public/index.html file
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpack React</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="main.js"></script> <!-- The output file of webpack config-->
+</body>
+</html>
+```
 
 ## Step 8: Create src/App.js file
 Create src/App.js file
+```javascript
+import React from "react";
+
+const App = () =>{
+    return (
+        <h1>
+            React App built from scratch with Webpack and Babel
+        </h1>
+    )
+}
+
+export default App;
+```
 
 ## Step 9: Create index.js file
 Entry point for the application
+Create index.js file
+```javascript
+import React from "react";
+import reactDom from "react-dom";
+import App from "./src/App"
+
+reactDom.render(<App />, document.getElementById("root"));
+```
 
 ## Step 10: Create webpack.config.js file
 Create webpack.config.js file
@@ -207,7 +238,7 @@ module.exports={
 }
 ```
 
-Step 11: Create .babelrc file
+## Step 11: Create .babelrc file
 ``` javascript
 {
     /*
@@ -227,6 +258,36 @@ Step 11: Create .babelrc file
 }
 ```
 
+# Step 12 : Update the package.json file
+Update the package.json file with the following scripts
+
+```json
+"scripts": {
+    "start": "webpack-dev-server .",
+    "build": "Webpack ."
+}
+```
+
+## Step 13: Run the App
+Run the application using the following command
+
+```bash
+npm start
+```
+
+## Step 14: Build the App
+Build the application using the following command
+
+```bash
+npm run build
+```
+
+## Step 15: Run the App
+Run the application using the following command
+
+```bash
+npm start
+```
 
 
 
